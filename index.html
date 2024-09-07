@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editable Resume</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Form Section to Capture Input -->
+        <div class="form-section">
+            <h2>Resume Builder</h2>
+            <form id="resumeForm">
+                <h3>Personal Information</h3>
+                <label for="name">Full Name:</label>
+                <input type="text" id="nameInput" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="emailInput" required>
+
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phoneInput" required>
+
+                <label for="about">About Me:</label>
+                <textarea id="aboutInput" required></textarea>
+
+                <h3>Education</h3>
+                <label for="education">Highest Qualification:</label>
+                <input type="text" id="educationInput" required>
+
+                <h3>Work Experience</h3>
+                <label for="experience">Latest Job Title:</label>
+                <input type="text" id="experienceInput" required>
+
+                <label for="skills">Skills (comma-separated):</label>
+                <input type="text" id="skillsInput" required>
+
+                <button type="submit">Generate Resume</button>
+            </form>
+        </div>
+
+        <!-- Resume Display Section -->
+        <div class="resume-section" id="resume">
+            <h1 id="resumeName">Your Name</h1>
+            <p id="resumeEmail">Email: your.email@example.com</p>
+            <p id="resumePhone">Phone: 123-456-7890</p>
+
+            <div id="resumeAbout">
+                <h3>About Me</h3>
+                <p>Tell us about yourself</p>
+            </div>
+
+            <div id="resumeEducation">
+                <h3>Education</h3>
+                <p>Highest qualification goes here</p>
+            </div>
+
+            <div id="resumeExperience">
+                <h3>Experience</h3>
+                <p>Your latest job title here</p>
+            </div>
+
+            <div id="resumeSkills">
+                <h3>Skills</h3>
+                <ul id="skillsList"></ul>
+            </div>
+
+            <button id="edit-btn">Enable Editing</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
